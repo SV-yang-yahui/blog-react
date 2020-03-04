@@ -7,6 +7,7 @@ import { connect } from 'dva';
 import SelectLang from '@/components/SelectLang';
 import logo from '../assets/logo.svg';
 import styles from './UserLayout.less';
+import CommonFooter from './CommonFooter'
 
 const UserLayout = props => {
   const {
@@ -37,7 +38,7 @@ const UserLayout = props => {
 
       <div className={styles.container}>
         <div className={styles.lang}>
-          {/* <SelectLang /> */}
+          <SelectLang />
         </div>
         <div className={styles.content}>
           <div className={styles.top}>
@@ -51,7 +52,7 @@ const UserLayout = props => {
           </div>
           {children}
         </div>
-        {/* <DefaultFooter /> */}
+      <CommonFooter />
       </div>
     </>
   );

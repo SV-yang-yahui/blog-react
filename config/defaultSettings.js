@@ -1,17 +1,17 @@
 export default {
   navTheme: 'dark',
   // 拂晓蓝
-  primaryColor: '#1890ff',
-  layout: 'sidemenu',
+  primaryColor: '#52c41a',
+  layout: 'topmenu',
   contentWidth: 'Fluid',
-  fixedHeader: false,
+  fixedHeader: true,
   autoHideHeader: false,
   fixSiderbar: false,
   colorWeak: false,
   menu: {
     locale: true,
   },
-  title: 'Ant Design Pro',
+  title: '九亭青年博客',
   pwa: false,
   iconfontUrl: '',
 };
