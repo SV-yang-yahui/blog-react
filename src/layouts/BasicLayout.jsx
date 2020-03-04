@@ -38,39 +38,39 @@ const menuDataRender = menuList =>
 
 const defaultFooterDom = (
   <DefaultFooter
-    copyright="2019 蚂蚁金服体验技术部出品"
+    copyright="2020 九亭技术部出品"
     links={[
       {
-        key: 'Ant Design Pro',
-        title: 'Ant Design Pro',
-        href: 'https://pro.ant.design',
-        blankTarget: true,
+        key: 'jiuting',
+        title: '九亭青年',
+        href: '#javascript:;',
+        blankTarget: false,
       },
       {
         key: 'github',
         title: <GithubOutlined />,
-        href: 'https://github.com/ant-design/ant-design-pro',
+        href: 'https://github.com/yangyahuiOnline/blog-react',
         blankTarget: true,
       },
       {
-        key: 'Ant Design',
-        title: 'Ant Design',
-        href: 'https://ant.design',
-        blankTarget: true,
+        key: 'bloglab',
+        title: 'BlogLab',
+        href: '#javascript:;',
+        blankTarget: false,
       },
     ]}
   />
 );
 
 const footerRender = () => {
-  if (!isAntDesignPro()) {
-    return defaultFooterDom;
-  }
+  // if (!isAntDesignPro()) {
+  //   return defaultFooterDom;
+  // }
 
   return (
     <>
       {defaultFooterDom}
-      <div
+      {/* <div
         style={{
           padding: '0px 24px 24px',
           textAlign: 'center',
@@ -83,7 +83,7 @@ const footerRender = () => {
             alt="netlify logo"
           />
         </a>
-      </div>
+      </div> */}
     </>
   );
 };
