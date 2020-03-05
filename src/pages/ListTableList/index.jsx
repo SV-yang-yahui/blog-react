@@ -153,7 +153,7 @@ const TableList = () => {
   return (
     <PageHeaderWrapper>
       <ProTable
-        headerTitle="查询表格"
+        headerTitle="操作日志"
         actionRef={actionRef}
         rowKey="key"
         onChange={(_, _filter, _sorter) => {

@@ -129,10 +129,28 @@ export default {
               ],
             },
             {
+              name: '文章列表',
+              icon: 'smile',
+              path: '/listsearcharticles',
+              component: './ListSearchArticles',
+            },
+            {
+              name: '文章分类',
+              icon: 'smile',
+              path: '/listcards',
+              component: './Listcards',
+            },
+            {
               name: 'list.table-list',
               icon: 'table',
               path: '/list',
               component: './ListTableList',
+            },
+            {
+              name: '脑图编辑器',
+              icon: 'smile',
+              path: '/editormind',
+              component: './EditorMind',
             },
             {
               component: './404',

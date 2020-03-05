@@ -36,7 +36,7 @@ defaultAntd = defaultAntd.default || defaultAntd;
 const localeInfo = {
   'en-US': {
     messages: {
-      ...((locale) => locale.__esModule ? locale.default : locale)(require('/Users/caicloud/Desktop/joker/blog-react/src/locales/en-US.js')),
+      ...((locale) => locale.__esModule ? locale.default : locale)(require('/Users/caicloud/Desktop/joker/blog-react/src/locales/en-US.js')),...((locale) => locale.__esModule ? locale.default : locale)(require('/Users/caicloud/Desktop/joker/blog-react/src/pages/EditorMind/locales/en-US.js')),
     },
     locale: 'en-US',
     antd: require('antd/lib/locale-provider/en_US'),
@@ -54,7 +54,7 @@ const localeInfo = {
   },
   'zh-CN': {
     messages: {
-      ...((locale) => locale.__esModule ? locale.default : locale)(require('/Users/caicloud/Desktop/joker/blog-react/src/locales/zh-CN.js')),
+      ...((locale) => locale.__esModule ? locale.default : locale)(require('/Users/caicloud/Desktop/joker/blog-react/src/locales/zh-CN.js')),...((locale) => locale.__esModule ? locale.default : locale)(require('/Users/caicloud/Desktop/joker/blog-react/src/pages/EditorMind/locales/zh-CN.js')),
     },
     locale: 'zh-CN',
     antd: require('antd/lib/locale-provider/zh_CN'),

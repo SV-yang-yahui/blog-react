@@ -130,6 +130,50 @@ const routes = [
             ],
           },
           {
+            name: '文章列表',
+            icon: 'smile',
+            path: '/listsearcharticles',
+            component: __IS_BROWSER
+              ? _dvaDynamic({
+                  app: require('@tmp/dva').getApp(),
+                  models: () => [
+                    import(/* webpackChunkName: 'p__ListSearchArticles__model.js' */ '/Users/caicloud/Desktop/joker/blog-react/src/pages/ListSearchArticles/model.js').then(
+                      m => {
+                        return { namespace: 'model', ...m.default };
+                      },
+                    ),
+                  ],
+                  component: () =>
+                    import(/* webpackChunkName: "p__ListSearchArticles" */ '../ListSearchArticles'),
+                  LoadingComponent: require('/Users/caicloud/Desktop/joker/blog-react/src/components/PageLoading/index')
+                    .default,
+                })
+              : require('../ListSearchArticles').default,
+            exact: true,
+          },
+          {
+            name: '文章分类',
+            icon: 'smile',
+            path: '/listcards',
+            component: __IS_BROWSER
+              ? _dvaDynamic({
+                  app: require('@tmp/dva').getApp(),
+                  models: () => [
+                    import(/* webpackChunkName: 'p__Listcards__model.js' */ '/Users/caicloud/Desktop/joker/blog-react/src/pages/Listcards/model.js').then(
+                      m => {
+                        return { namespace: 'model', ...m.default };
+                      },
+                    ),
+                  ],
+                  component: () =>
+                    import(/* webpackChunkName: "p__Listcards" */ '../Listcards'),
+                  LoadingComponent: require('/Users/caicloud/Desktop/joker/blog-react/src/components/PageLoading/index')
+                    .default,
+                })
+              : require('../Listcards').default,
+            exact: true,
+          },
+          {
             name: 'list.table-list',
             icon: 'table',
             path: '/list',
@@ -141,6 +185,20 @@ const routes = [
                     .default,
                 })
               : require('../ListTableList').default,
+            exact: true,
+          },
+          {
+            name: '脑图编辑器',
+            icon: 'smile',
+            path: '/editormind',
+            component: __IS_BROWSER
+              ? _dvaDynamic({
+                  component: () =>
+                    import(/* webpackChunkName: "p__EditorMind" */ '../EditorMind'),
+                  LoadingComponent: require('/Users/caicloud/Desktop/joker/blog-react/src/components/PageLoading/index')
+                    .default,
+                })
+              : require('../EditorMind').default,
             exact: true,
           },
           {
